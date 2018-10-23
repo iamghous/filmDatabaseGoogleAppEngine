@@ -1,0 +1,59 @@
+<html>
+  <head>
+      
+
+
+    <meta charset="utf-8">
+    <title>Search Film - NomanFilms</title>
+      <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+       <link rel="stylesheet" type="text/css" href="css/insertFilm.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="scripts/myJquery.js"></script>
+         <script src="scripts/javascript.js"></script>
+  
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="nameLogo">
+        <em>Noman</em><strong>Films</strong>
+      </a>
+      <nav class = "navigationBar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="allFilms.html">All Films</a></li>
+          <li><a href="searchFilm.html">Search Film</a></li>
+          <li><a href="insertFilm.html">Insert Film</a></li>
+        </ul>      
+      </nav>
+    </header>
+    <section class = "mainSection">
+      <h1 style= "padding-top: 9%;">Search Film</h1>
+       <div id="allTypeDataDiv">
+        
+        <form onsubmit="getSearchedFilmData('getFilm','searchFilmOutputDiv');return false" method="post">
+        
+        <input name = "searchFilmName" id = "searchFilmName" placeholder= "Search Film e.g. Avatar"style ="display:inline-block;" type="text" required>
+        <select  class ="selectComboBox"id = "selectSearchFilmBox">
+        <option value="xml">XML</option>
+        <option value="json">JSON</option>
+        <option value="structured">Structured</option>
+        </select>
+            
+       <input class = "submitButton" type="submit"  value = "Search Film" >
+          </form>
+           <br>
+           <div class = "insertFilmOutputDiv" id = "searchFilmOutputDiv"></div>
+            <br>
+         <div id="structuredOutput">STRUCTURED DATA  &#8691; </div>
+        <div id="structuredOutput1">  </div>
+            <br>
+            <div id="xmlOutput">XML DATA &#8691;</div>
+        <div id="xmlOutput1">  </div>
+            <br>
+            <div id="jsonOutput">JSON DATA  &#8691;</div>
+        <div id="jsonOutput1">  </div>
+        
+        </div>
+    </section>
+  </body>
+</html>
